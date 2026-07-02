@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- اس لائن سے براؤزر کو پتہ چلتا ہے کہ موبائل پر سککیلنگ نہیں کرنی -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio By Viaana</title>
+  
+  <style>
+    :root { 
+      --bg: #EAE3D6; 
+      --ink: #26201A; 
+      --brown: #6B4A34; 
+    }
+    
+    /* سب کچھ ری سیٹ کیا تاکہ کوئی بکھراؤ نہ ہو */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body { 
+      background: var(--bg); 
+      color: var(--ink); 
+      font-family: sans-serif; 
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
+    .logo { font-weight: bold; font-size: 1.1rem; }
+    .nav { display: flex; gap: 15px; font-size: 0.9rem; }
+    .nav a { color: var(--ink); text-decoration: underline; }
+
+    /* ٹیکسٹ کے سائز کو فکس کیا تاکہ کروم پر چھوٹا نہ ہو */
+    .eyebrow { font-size: 0.7rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+    h1 { font-size: 2.2rem; line-height: 1.1; margin-bottom: 25px; }
+    h2 { font-size: 1.5rem; margin-bottom: 20px; }
+
+    .btn { 
+      display: inline-block; padding: 15px 25px; 
+      border: none; cursor: pointer; color: #fff;
+      font-size: 0.9rem; text-decoration: none;
+    }
+    .btn-black { background: var(--ink); }
+    .btn-brown { background: var(--brown); margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Studio By Viaana</div>
+    <div class="nav">
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="eyebrow">Creative Practice</div>
+    <h1>Considered design,<br>honestly made.</h1>
+    <button class="btn btn-black">Start a project</button>
+
+    <div style="margin-top: 50px;">
+      <h2>Let's build something.</h2>
+      <button id="whatsappBtn" class="btn btn-brown">Message us on WhatsApp</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('whatsappBtn').addEventListener('click', () => {
+      window.open('https://wa.me/923001234567', '_blank');
+    });
+  </script>
+</body>
+</html>
+
